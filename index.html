@@ -1,1 +1,247 @@
-<!DOCTYPE html><html><head><title>x0d_Jar</title><meta charset='UTF-8'></head><body><h1>x0d_Jar</h1><p>Reverse engineering & malware analysis</p><a href='https://t.me/x0d_Jar'>@x0d_Jar</a></body></html> 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>x0d - Security Research</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+body {
+    background-color: #000000;
+    color: #cfa9e6;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2rV7928GBgYGVBgAEGAAEEcDW8E73kYAAAAASUVORK5CYII=');
+}
+a {
+    color: #e100ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #FFFFFF;
+    background-color: #800080;
+    text-decoration: underline;
+}
+.main-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #000000;
+    border: 5px ridge #800080;
+}
+.header {
+    background-color: #140026;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 5px double #8a2be2;
+}
+h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 42px;
+    text-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 20px #e100ff;
+}
+.content {
+    padding: 20px;
+}
+h2 {
+    color: #e100ff;
+    border-bottom: 2px dashed #800080;
+    padding-bottom: 5px;
+    font-size: 26px;
+    text-shadow: 2px 2px #2a002a;
+}
+ul {
+    list-style-type: square;
+}
+li {
+    margin-bottom: 8px;
+}
+fieldset {
+    border: 3px groove #8a2be2;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #0a0014;
+}
+legend {
+    color: #ff77ff;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #000000;
+    border: 1px solid #800080;
+    padding: 2px 5px;
+}
+.crypto-box {
+    background-color: #140026;
+    border: 1px inset #8a2be2;
+    padding: 10px;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+    color: #b026ff;
+}
+.alert-box {
+    border: 3px solid #ff00ff;
+    background-color: #2a002a;
+    color: #ff77ff;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #800080;
+}
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #140026;
+    border-top: 5px double #8a2be2;
+    font-size: 16px;
+    color: #cfa9e6;
+}
+marquee {
+    background-color: #140026;
+    color: #e100ff;
+    padding: 5px;
+    border-bottom: 2px solid #800080;
+    font-size: 20px;
+    font-weight: bold;
+}
+.avatar-box {
+    float: left;
+    margin: 0 15px 10px 0;
+    border: 4px outset #8a2be2;
+    background-color: #140026;
+    padding: 5px;
+    text-align: center;
+}
+.avatar-box img {
+    border: 2px inset #e100ff;
+    display: block;
+    background-color: #000000;
+}
+.buttons-panel {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #000000;
+    border: 3px dashed #800080;
+}
+.micro-btn {
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    border: 2px outset #8a2be2;
+    background: #140026;
+    color: #cfa9e6;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 27px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px;
+    box-sizing: border-box;
+}
+.micro-btn:active {
+    border-style: inset;
+}
+.micro-btn:hover {
+    color: #FFFFFF !important;
+    background-color: #800080;
+    text-decoration: none;
+    border-color: #e100ff;
+}
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+.blink {
+  animation: blinker 1s linear infinite;
+}
+.counter {
+    border: 2px solid #8a2be2;
+    display: inline-block;
+    padding: 2px 5px;
+    background: #000000;
+    color: #e100ff;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<table class="main-table" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="header">
+            <h1>&lt;x0d_ /&gt;</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <marquee scrollamount="5">!!! WELCOME TO MY SECURITY RESEARCH LAB !!! NO SKIDS ALLOWED !!!</marquee>
+        </td>
+    </tr>
+    <tr>
+        <td class="content">
+            <div class="avatar-box">
+                <img src="picture.jpg" alt="x0d avatar" width="150" height="150" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\'><rect width=\'150\' height=\'150\' fill=\'#000\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'#e100ff\' font-family=\'VT323, monospace\' font-weight=\'bold\' font-size=\'20\'>NO_AVATAR</text></svg>'">
+                <br>
+                <span style="font-size: 14px; color: #ff77ff; font-weight: bold;" class="blink">&gt; STATUS: ONLINE &lt;</span>
+            </div>
+            <p>Приветствую. Меня зовут <b>x0d</b>.</p>
+            <p>Я — независимый исследователь в области информационной безопасности. Моя основная специализация заключается в реверс-инжиниринге Java JAR и .NET PE файлов. В первую очередь я занимаюсь техническим анализом вредоносного программного обеспечения, которое злоумышленники маскируют под читы для Minecraft (хитбоксы, различные модификации и клиенты).</p>
+            <p>Своими находками я делюсь в Telegram-канале <a href="#" target="_blank"><b>@x0d_Jar</b></a>, где публикую подробные технические разборы малвари и делюсь индикаторами компрометации (IoC).</p>
+
+            <h2>~ Мой технический стек ~</h2>
+            <ul>
+                <li>Декомпиляция JAR-архивов и глубокий анализ байткода</li>
+                <li>Работа с Constant Pool</li>
+                <li>Деобфускация алгоритмов шифрования (XOR, Blowfish/ECB, DES/ECB, substitution cipher, base64)</li>
+                <li>Написание Python-скриптов для автоматизированного декрипта строк</li>
+                <li>Статический анализ .NET приложений (Mono/PE32)</li>
+            </ul>
+
+            <fieldset>
+                <legend>:: Связь со мной ::</legend>
+                <p>1. Директ моего Telegram-канала</p>
+                <p>2. <b>qTOX:</b></p>
+                <div class="crypto-box">1BE945FC90513751C24367A54D4F542ABDE0B2E514B542ACC43C6034E8A3E613FF31AA6AE369</div>
+            </fieldset>
+
+            <fieldset>
+                <legend>:: Поддержать проект (Донат) ::</legend>
+                <p><b>BTC:</b></p>
+                <div class="crypto-box">&gt; bc1qvsrlwa0m2ahdy4uv585e2p244rarf74xks5j57</div>
+                <p><b>Monero (XMR):</b></p>
+                <div class="crypto-box">&gt; 88Xt8qhVU2JWzAeBmKsunwakZQqnXMhecRroCe5dAcM4AKUFk35bSneb9xiUf8aUcM1gNfFiWNdYQ6CjSCUM8diCNYc72gq</div>
+            </fieldset>
+
+            <div class="alert-box">
+                <span class="blink">⚠ ВНИМАНИЕ ⚠</span><br><br>
+                Других средств связи нет!!!<br>Это мои единственные контакты и кошельки!!!
+            </div>
+
+            <div class="buttons-panel">
+                <a href="#" class="micro-btn" style="border-color: #4b0082;">ANTI-SKID</a>
+                <a href="#" class="micro-btn" style="border-color: #800080;">REVERSE IT</a>
+                <a href="#" class="micro-btn" style="border-color: #8a2be2;">MALWARE</a>
+                <a href="#" class="micro-btn" style="border-color: #9932cc;">GUESTBOOK</a>
+                <a href="#" class="micro-btn" style="border-color: #b026ff;">NO HTML5</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="footer">
+            &copy; 200X - x0d. All rights reversed.<br>
+            <div class="counter">001337</div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
